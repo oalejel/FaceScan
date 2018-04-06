@@ -33,13 +33,27 @@
                                     <action selector="scanPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tde-Gb-aRs"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-Pe-GVR">
+                                <rect key="frame" x="16" y="569" width="343" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="cUs-wZ-NIh"/>
+                                </constraints>
+                                <string key="text">Face Scanner takes ten facial images to help you quickly and securely authenticate with your face. Press "Scan Face" when ready in a well-lit room.</string>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="XlW-Pe-GVR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4Ot-3e-nbT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XlW-Pe-GVR" secondAttribute="bottom" constant="20" id="ivQ-P7-oua"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pp5-Zp-q2m" secondAttribute="trailing" priority="999" constant="95" id="mQg-SH-5Vj"/>
                             <constraint firstItem="Pp5-Zp-q2m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="999" constant="94" id="qbK-6f-XGc"/>
                             <constraint firstItem="Pp5-Zp-q2m" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xTb-5q-3Pu"/>
                             <constraint firstItem="Pp5-Zp-q2m" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-25" id="zBw-J9-f7Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XlW-Pe-GVR" secondAttribute="trailing" constant="16" id="zTU-LW-hAB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -49,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.5" y="132.5"/>
+            <point key="canvasLocation" x="135.19999999999999" y="131.78410794602701"/>
         </scene>
         <!--Camera Scan Controller-->
         <scene sceneID="hDB-0W-38D">
@@ -58,13 +72,28 @@
                     <view key="view" contentMode="scaleToFill" id="Hzl-mx-bT8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan 0 / 10 complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFZ-tK-eHA">
+                                <rect key="frame" x="192" y="626" width="167" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bpx-Vc-Gug" firstAttribute="trailing" secondItem="cFZ-tK-eHA" secondAttribute="trailing" constant="16" id="AJt-L6-LnG"/>
+                            <constraint firstItem="bpx-Vc-Gug" firstAttribute="bottom" secondItem="cFZ-tK-eHA" secondAttribute="bottom" constant="20" id="M3y-ae-emO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bpx-Vc-Gug"/>
                     </view>
+                    <connections>
+                        <outlet property="scanLabel" destination="cFZ-tK-eHA" id="DNh-56-9i9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0i2-b1-HT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945" y="133"/>
+            <point key="canvasLocation" x="944.79999999999995" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

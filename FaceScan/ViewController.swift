@@ -11,11 +11,9 @@ import AVFoundation
 
 /*
  Notes (remove on completion)
- – make camera controlling class separate from view controller if you have the time
  – to add to configurations: convert to swift 4 for nicer enum philosophy!
  – review comments made
  – a constraint of 999 was need for the sake of calming an error involving localization and constrained button labels. when you add loc. you consider these things
- 
  
  
  
@@ -37,12 +35,10 @@ class ViewController: UIViewController {
         }
     }
     
+    //when scan pressed, show our scanning scene!
     func presentCamera() {
         performSegue(withIdentifier: "showScanner", sender: nil)
     }
-    
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
