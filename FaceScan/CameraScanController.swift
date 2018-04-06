@@ -103,17 +103,16 @@ class CameraScanController: UIViewController, AVCapturePhotoCaptureDelegate {
         })
     }
     
-    // once our images [] is full, we save everything with an NSKeyedArchiver
+    // once our images [] is full, we save everything with the keychain
     func saveImageData() {
         for (index,image) in images.enumerated() {
-            //create a secure NSKeyedArchiver to save images with indices
-            // find way to activate this requirement on class
-            //            NSKeyedArchiver().requiresSecureCoding = true
-            let fm = FileManager.default
+            // iterate through the 10 images and save in keychain
             if let jpegData = UIImageJPEGRepresentation(image, 1) {
-                let url = fm.urls(for: .documentDirectory, in: .userDomainMask).first
-                let path = (url!.appendingPathComponent("faceImages_\(index)").path)
-                NSKeyedArchiver.archiveRootObject(jpegData, toFile: path)
+                //using a 3rd party API that simplifies keychain secure storage
+                let keychain = KeychainSwift()
+                keychain.set(jpegData, forKey: "faceImage_\(index)")
+                //NOTE: if we need to share this data with another app,
+                //we must specify the app sandboxed group
             }
         }
     }
@@ -127,7 +126,10 @@ class CameraScanController: UIViewController, AVCapturePhotoCaptureDelegate {
     //called when processing ready
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         print("processed")
-        scanLabel.text = "Scan \(images.count + 1)/\(snapsRequired) complete"
+        DispatchQueue.main.async {
+            self.scanLabel.text = "Scan \(self.images.count + 1)/\(self.snapsRequired) complete"
+        }
+        
         if let photoData = photo.fileDataRepresentation() {
             // create uiimage from data and save it for storage later
             if let image = UIImage(data: photoData) {
