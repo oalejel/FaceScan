@@ -4,6 +4,8 @@ FaceScan takes 10 images of your face and stores them securely with SwiftKeychai
 
 This project was built with Xcode 9.3. Swift version is currently set to 3.3 according to the given specifications.
 
+Note: it is essential that you adjust Xcode entitlements so that mine do not conflict with your developer account. This is necessary for the keychain capability.
+
 ## Further Considerations
 1. Adding UI that indicates where to place one's face is a necessary next step.
 1. Giving the user a greater time to pause before and between images may help with adjustment of head.
