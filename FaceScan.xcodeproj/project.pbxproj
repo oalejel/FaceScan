@@ -14,6 +14,8 @@
 		3D06227A2078142300DEFADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0622782078142300DEFADD /* LaunchScreen.storyboard */; };
 		3D0622852078142300DEFADD /* FaceScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0622842078142300DEFADD /* FaceScanTests.swift */; };
 		3D0622902078142300DEFADD /* FaceScanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06228F2078142300DEFADD /* FaceScanUITests.swift */; };
+		3D06229E2078149200DEFADD /* SqueezeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06229D2078149200DEFADD /* SqueezeButton.swift */; };
+		3D9909C020781CAA008BFFF3 /* CameraScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9909BF20781CAA008BFFF3 /* CameraScanController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3D06228B2078142300DEFADD /* FaceScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceScanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D06228F2078142300DEFADD /* FaceScanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceScanUITests.swift; sourceTree = "<group>"; };
 		3D0622912078142300DEFADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D06229D2078149200DEFADD /* SqueezeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqueezeButton.swift; sourceTree = "<group>"; };
+		3D9909BF20781CAA008BFFF3 /* CameraScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScanController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,9 @@
 			children = (
 				3D06226F2078142100DEFADD /* AppDelegate.swift */,
 				3D0622712078142100DEFADD /* ViewController.swift */,
+				3D9909BF20781CAA008BFFF3 /* CameraScanController.swift */,
 				3D0622732078142100DEFADD /* Main.storyboard */,
+				3D06229D2078149200DEFADD /* SqueezeButton.swift */,
 				3D0622762078142300DEFADD /* Assets.xcassets */,
 				3D0622782078142300DEFADD /* LaunchScreen.storyboard */,
 				3D06227B2078142300DEFADD /* Info.plist */,
@@ -258,6 +264,8 @@
 			files = (
 				3D0622722078142100DEFADD /* ViewController.swift in Sources */,
 				3D0622702078142100DEFADD /* AppDelegate.swift in Sources */,
+				3D06229E2078149200DEFADD /* SqueezeButton.swift in Sources */,
+				3D9909C020781CAA008BFFF3 /* CameraScanController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +447,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = omaralejel.FaceScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -457,7 +465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = omaralejel.FaceScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
