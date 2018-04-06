@@ -84,6 +84,7 @@
                         <constraints>
                             <constraint firstItem="bpx-Vc-Gug" firstAttribute="trailing" secondItem="cFZ-tK-eHA" secondAttribute="trailing" constant="16" id="AJt-L6-LnG"/>
                             <constraint firstItem="bpx-Vc-Gug" firstAttribute="bottom" secondItem="cFZ-tK-eHA" secondAttribute="bottom" constant="20" id="M3y-ae-emO"/>
+                            <constraint firstItem="cFZ-tK-eHA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hzl-mx-bT8" secondAttribute="leading" priority="999" constant="20" symbolic="YES" id="QXW-QM-EGt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bpx-Vc-Gug"/>
                     </view>
